@@ -66,23 +66,23 @@ export default function Contact() {
   };
 
   return (
-    <div className="pt-32 pb-20 relative overflow-hidden">
+    <div className="pt-24 md:pt-32 pb-20 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-primary/5 blur-[150px] -z-10 rounded-full" />
 
-      <section className="section-padding text-center space-y-6">
-        <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight uppercase">
+      <section className="section-padding text-center space-y-4 md:space-y-6">
+        <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-white tracking-tight uppercase">
           Let's Talk <span className="text-gradient underline decoration-brand-accent/20">HR</span>
         </h1>
-        <p className="text-slate-400 text-[18px] max-w-2xl mx-auto leading-relaxed">
+        <p className="text-slate-400 text-base md:text-[18px] max-w-2xl mx-auto leading-relaxed">
           Scale your business securely. Book a free consultation with our advisory team and discover the NEXO advantage.
         </p>
       </section>
 
       <section className="section-padding pt-0">
-        <div className="grid lg:grid-cols-5 gap-12">
+        <div className="grid lg:grid-cols-5 gap-6 md:gap-12">
           {/* Info Side */}
           <div className="lg:col-span-2 space-y-8">
-            <div className="glass p-10 rounded-[3rem] space-y-12 h-full flex flex-col justify-between">
+            <div className="glass p-6 sm:p-8 md:p-10 rounded-[2rem] md:rounded-[3rem] space-y-8 md:space-y-12 h-full flex flex-col justify-between">
               <div className="space-y-8">
                 <h3 className="text-2xl font-bold text-white uppercase tracking-tight">Direct Channels</h3>
                 <div className="space-y-8">
@@ -122,7 +122,7 @@ export default function Contact() {
 
           {/* Form Side */}
           <div className="lg:col-span-3">
-            <div className="glass p-8 md:p-12 rounded-[3.5rem] relative overflow-hidden h-full">
+            <div className="glass p-5 sm:p-8 md:p-12 rounded-[2rem] md:rounded-[3.5rem] relative overflow-hidden h-full">
               <AnimatePresence mode="wait">
                 {formState === 'success' ? (
                   <motion.div
@@ -134,7 +134,7 @@ export default function Contact() {
                     <div className="w-24 h-24 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent mb-8 animate-bounce transition-all [animation-duration:3s]">
                       <CheckCircle2 size={48} />
                     </div>
-                    <h3 className="text-4xl font-bold text-white mb-4 uppercase tracking-tighter">Request Received!</h3>
+                    <h3 className="text-2xl md:text-4xl font-bold text-white mb-4 uppercase tracking-tighter">Request Received!</h3>
                     <p className="text-slate-400 text-lg max-w-sm mb-10 leading-relaxed">
                       Our HR expert will reach out to you within the next 4 working hours to schedule a specialized discovery call.
                     </p>
@@ -151,7 +151,7 @@ export default function Contact() {
                     className="space-y-10"
                   >
                     <div className="space-y-2">
-                      <h3 className="text-2xl font-bold text-white uppercase tracking-tight">Book Free Consultation</h3>
+                      <h3 className="text-xl md:text-2xl font-bold text-white uppercase tracking-tight">Book Free Consultation</h3>
                       <p className="text-slate-500 text-sm italic">Tell us about your requirements and we will build a roadmap for you.</p>
                     </div>
 
@@ -162,7 +162,7 @@ export default function Contact() {
                       </div>
                     )}
 
-                    <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-8">
+                    <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8">
                       <div className="space-y-2">
                         <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest pl-2">Full Name</label>
                         <input
@@ -200,7 +200,7 @@ export default function Contact() {
                         />
                       </div>
 
-                      <div className="col-span-2 space-y-3">
+                      <div className="col-span-full space-y-3">
                         <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest pl-2">Service of Interest</label>
                         <div className="flex flex-wrap gap-2">
                           {SERVICE_OPTIONS.map((s) => (
@@ -233,7 +233,7 @@ export default function Contact() {
                       <button
                         type="submit"
                         disabled={formState === 'submitting'}
-                        className="col-span-2 btn-primary py-5 text-lg uppercase tracking-widest flex items-center justify-center gap-4 disabled:opacity-50"
+                        className="col-span-full btn-primary text-base md:text-lg uppercase tracking-widest flex items-center justify-center gap-4 disabled:opacity-50"
                       >
                         {formState === 'submitting' ? (
                           <div className="w-6 h-6 border-4 border-white/30 border-t-white rounded-full animate-spin" />
